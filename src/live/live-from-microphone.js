@@ -24,7 +24,7 @@ async function initLiveSession() {
     return await response.json();
 //new code below
     const {id, url} = response.json();
-    console.log(id, url)
+    console.log({id,url});
 }
 
 
