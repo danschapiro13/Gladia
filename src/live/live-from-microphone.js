@@ -23,6 +23,9 @@ async function initLiveSession() {
     }
     return await response.json();
 }
+
+const {id, url} = await response.json();
+
 function initWebSocket({ url }, onOpen) {
     const socket = new WebSocket(url);
     socket.addEventListener("open", function () {
