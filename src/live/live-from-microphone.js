@@ -22,7 +22,7 @@ async function initLiveSession() {
         process.exit(response.status);
     }
     console.log( await response.json());
-
+    return await response.json()
     //const {id, url} = await response.json();
 }
 
