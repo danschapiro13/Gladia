@@ -22,9 +22,12 @@ async function initLiveSession() {
         process.exit(response.status);
     }
     return await response.json();
+//new code below
+    const {id, url} = response.json();
+    console.log(id, url)
 }
 
-const {id, url} = response.json();
+
 
 function initWebSocket({ url }, onOpen) {
     const socket = new WebSocket(url);
