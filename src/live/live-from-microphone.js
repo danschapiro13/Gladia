@@ -21,8 +21,9 @@ async function initLiveSession() {
         console.error(`${response.status}: ${(await response.text()) || response.statusText}`);
         process.exit(response.status);
     }
+    return await response.json();
     console.log( await response.json());
-    return await response.json()
+    
     //const {id, url} = await response.json();
 }
 
