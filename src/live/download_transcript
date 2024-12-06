@@ -1,0 +1,5 @@
+// to download the transcript, copy and past this code into your command line and replace {id} with your recording ID and <api-key> with your API key
+
+curl --request GET \
+  --url https://api.gladia.io/v2/live/{id}/file \
+  --header 'x-gladia-key: <api-key>
