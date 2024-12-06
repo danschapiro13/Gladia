@@ -1,0 +1,5 @@
+//copy into command prompt, replacing {id} with transcription id and <api-key> with your API key
+
+curl --request GET \
+  --url https://api.gladia.io/v2/live/{id} \
+  --header 'x-gladia-key: <api-key>'
