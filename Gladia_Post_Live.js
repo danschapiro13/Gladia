@@ -5,7 +5,7 @@
       'X-Gladia-Key': 'e82e1765-a1ff-49f6-93a3-613b5fd70c32',
     },
     body: JSON.stringify({
-      encoding: 'wav/ulaw',
+      encoding: 'wav/alaw',
       sample_rate: 8000,
       bit_depth: 8,
       channels: 2,
