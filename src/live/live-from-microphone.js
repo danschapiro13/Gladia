@@ -3,10 +3,16 @@ import { initMicrophoneRecorder, printMessage, readGladiaKey } from "../helpers.
 const gladiaApiUrl = "https://api.gladia.io";
 const gladiaKey = readGladiaKey();
 const config = {
-    encoding: "wav/pcm",
+    encoding: 'wav/alaw',
     sample_rate: 8000,
     bit_depth: 8,
     channels: 2,
+    maximum_duration_without_endpointing: 35,
+    custom_metadata:{user_name:'Dan S'},
+    language_config:{languages:['en','es','fr'],code_switching:true},
+    pre_processing:{audio_enhancer:true},
+    realtime_processing:{custom_vocabulary:true,custom_vocabulary_config:{vocabulary:['Gladia','Abi','Github']}, sentiment_analysis:true
+    }
 };
 async function initLiveSession() {
     const response = await fetch(`${gladiaApiUrl}/v2/live`, {
